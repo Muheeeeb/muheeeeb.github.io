@@ -10,9 +10,9 @@
             margin: 0;
             padding: 0;
             font-family: 'Inter', sans-serif;
-            background-color: #f5f5f5;
             color: #333;
             overflow-x: hidden;
+            background-color: #ffffff;
         }
         .container {
             max-width: 1200px;
@@ -25,8 +25,9 @@
             left: 0;
             width: 100%;
             padding: 20px 0;
-            background-color: rgba(245, 245, 245, 0.9);
+            background-color: #ffffff;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         nav {
             display: flex;
@@ -36,6 +37,7 @@
         .logo {
             font-size: 24px;
             font-weight: 700;
+            color: #333;
         }
         .menu {
             display: flex;
@@ -44,11 +46,11 @@
             margin-left: 30px;
             text-decoration: none;
             color: #333;
-            font-weight: 300;
+            font-weight: 400;
             transition: color 0.3s ease;
         }
         .menu a:hover {
-            color: #999;
+            color: #555;
         }
         .hero {
             height: 100vh;
@@ -56,7 +58,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background-color: #f0f0f0;
+            background-color: #f5f5f5;
         }
         h1 {
             font-size: 72px;
@@ -84,7 +86,7 @@
         }
         .about-content {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 50px;
         }
         .about-image {
@@ -98,7 +100,32 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         .about-text {
-            flex: 1;
+            flex: 2;
+        }
+        .about-text p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .skills-section {
+            background-color: #f0f0f0;
+            padding: 50px 0;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .skill-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         .project-grid {
             display: grid;
@@ -111,8 +138,6 @@
             border-radius: 5px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            opacity: 0;
-            transform: translateY(50px);
         }
         .project-item:hover {
             transform: translateY(-10px);
@@ -169,16 +194,34 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .social-links {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #555;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <nav>
-                <div class="logo">MA</div>
+                <div class="logo">
+                    MA
+                </div>
                 <div class="menu">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
                     <a href="#contact">Contact</a>
                 </div>
@@ -198,12 +241,34 @@
             <h2 class="section-title fade-in">About Me</h2>
             <div class="about-content">
                 <div class="about-image fade-in">
-                    <img src="abc.jpg" alt="Muheeb Ahmed">
+                    <img src="Images/abc.jpg" alt="Muheeb Ahmed">
                 </div>
                 <div class="about-text fade-in">
-                    <p>Currently pursuing a BS Degree in Artificial Intelligence, I'm passionate about merging cutting-edge AI technologies with practical web solutions. My journey in tech has led me to gain extensive experience in e-commerce development.</p>
-                    <p>I specialize in creating intelligent, data-driven web applications that not only look great but also provide tangible business value. My unique blend of AI knowledge and e-commerce expertise allows me to craft innovative solutions for modern business challenges.</p>
+                    <p>As a final-year BS Artificial Intelligence student at SZABIST, I am passionate about leveraging cutting-edge AI technologies to create innovative web solutions. My academic background, combined with practical experience in front-end development and e-commerce, has equipped me with a unique skill set to address complex technological challenges.</p>
+                    
+                    <p>Throughout my academic journey, I have focused on developing expertise in machine learning algorithms, natural language processing, and data analysis. This theoretical knowledge is complemented by hands-on experience in building responsive and user-friendly web interfaces.</p>
+                    
+                    <p>My professional experience includes roles in data processing and e-commerce management, where I honed my skills in data interpretation and gained valuable insights into digital marketplaces and consumer behavior. These experiences have reinforced my ability to develop data-driven web applications that not only boast aesthetic appeal but also deliver substantial business value.</p>
+                    
+                    <p>I am committed to continuous learning and staying at the forefront of AI and web development technologies. My goal is to create web solutions that are not only technologically advanced but also pragmatic and impactful for businesses navigating the digital landscape.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills</h2>
+            <div class="skills-grid fade-in">
+                <div class="skill-item">Machine Learning Algorithms</div>
+                <div class="skill-item">Data Preprocessing</div>
+                <div class="skill-item">Frameworks and Libraries</div>
+                <div class="skill-item">Natural Language Processing (NLP)</div>
+                <div class="skill-item">Model Evaluation and Optimization</div>
+                <div class="skill-item">Front-end Development</div>
+                <div class="skill-item">E-commerce Solutions</div>
+                <div class="skill-item">Data Analysis</div>
+                <div class="skill-item">Web Application Development</div>
             </div>
         </div>
     </section>
@@ -237,6 +302,11 @@
                 <textarea name="message" placeholder="Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
+            <div class="social-links fade-in">
+                <a href="https://www.linkedin.com/in/muheeb-ahmed-58223a275" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/muheeeeb" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.instagram.com/m_u_h_e_e_b/profilecard/?igsh=MTdldmM2dGFiNjVicg==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
         </div>
     </section>
 
