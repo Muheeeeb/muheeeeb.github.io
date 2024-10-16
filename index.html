@@ -11,8 +11,8 @@
             padding: 0;
             font-family: 'Inter', sans-serif;
             color: #333;
+            line-height: 1.6;
             overflow-x: hidden;
-            background-color: #ffffff;
         }
         .container {
             max-width: 1200px;
@@ -24,29 +24,27 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 20px 0;
-            background-color: #ffffff;
-            z-index: 1000;
+            background-color: #fff;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
         }
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 0;
         }
         .logo {
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 700;
-            color: #333;
         }
         .menu {
             display: flex;
         }
         .menu a {
-            margin-left: 30px;
+            margin-left: 1.5rem;
             text-decoration: none;
             color: #333;
-            font-weight: 400;
             transition: color 0.3s ease;
         }
         .menu a:hover {
@@ -59,35 +57,35 @@
             justify-content: center;
             text-align: center;
             background-color: #f5f5f5;
+            padding-top: 60px;
         }
         h1 {
-            font-size: 72px;
-            font-weight: 700;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin-bottom: 1rem;
             opacity: 0;
             transform: translateY(50px);
             animation: fadeInUp 1s ease forwards;
         }
         .subtitle {
-            font-size: 24px;
-            font-weight: 300;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
             opacity: 0;
             transform: translateY(50px);
             animation: fadeInUp 1s ease 0.5s forwards;
         }
         .section {
-            padding: 100px 0;
+            padding: 5rem 0;
         }
         .section-title {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 50px;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
             text-align: center;
         }
         .about-content {
             display: flex;
             align-items: flex-start;
-            gap: 50px;
+            gap: 2rem;
         }
         .about-image {
             flex: 1;
@@ -95,58 +93,38 @@
         }
         .about-image img {
             width: 100%;
-            height: auto;
             border-radius: 10px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         .about-text {
             flex: 2;
         }
-        .about-text p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-        .skills-section {
-            background-color: #f0f0f0;
-            padding: 50px 0;
-        }
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
         }
         .skill-item {
             background-color: #fff;
-            padding: 15px;
+            padding: 1rem;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .skill-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 2rem;
         }
         .project-item {
             background-color: #fff;
-            padding: 20px;
+            padding: 1.5rem;
             border-radius: 5px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .project-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
         .project-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
         }
         .contact-form {
             max-width: 600px;
@@ -154,30 +132,30 @@
         }
         input, textarea {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: none;
-            border-bottom: 1px solid #333;
-            background-color: transparent;
-            font-family: 'Inter', sans-serif;
-            transition: border-color 0.3s ease;
-        }
-        input:focus, textarea:focus {
-            border-color: #999;
-            outline: none;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
         button {
             background-color: #333;
             color: #fff;
             border: none;
-            padding: 10px 20px;
-            font-family: 'Inter', sans-serif;
+            padding: 0.5rem 1rem;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            transition: background-color 0.3s ease;
         }
         button:hover {
             background-color: #555;
-            transform: translateY(-3px);
+        }
+        .social-links {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .social-links a {
+            margin: 0 0.5rem;
+            color: #333;
+            text-decoration: none;
         }
         @keyframes fadeInUp {
             to {
@@ -194,20 +172,20 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .social-links {
-            margin-top: 30px;
-            text-align: center;
-        }
-        .social-links a {
-            display: inline-block;
-            margin: 0 15px;
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        .social-links a:hover {
-            color: #555;
+
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            .about-image {
+                max-width: 100%;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -215,9 +193,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">
-                    MA
-                </div>
+                <div class="logo">MA</div>
                 <div class="menu">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
@@ -239,36 +215,31 @@
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title fade-in">About Me</h2>
-            <div class="about-content">
-                <div class="about-image fade-in">
+            <div class="about-content fade-in">
+                <div class="about-image">
                     <img src="abc.jpg" alt="Muheeb Ahmed">
                 </div>
-                <div class="about-text fade-in">
-                    <p>As a final-year BS Artificial Intelligence student at SZABIST, I am passionate about leveraging cutting-edge AI technologies to create innovative web solutions. My academic background, combined with practical experience in front-end development and e-commerce, has equipped me with a unique skill set to address complex technological challenges.</p>
-                    
-                    <p>Throughout my academic journey, I have focused on developing expertise in machine learning algorithms, natural language processing, and data analysis. This theoretical knowledge is complemented by hands-on experience in building responsive and user-friendly web interfaces.</p>
-                    
-                    <p>My professional experience includes roles in data processing and e-commerce management, where I honed my skills in data interpretation and gained valuable insights into digital marketplaces and consumer behavior. These experiences have reinforced my ability to develop data-driven web applications that not only boast aesthetic appeal but also deliver substantial business value.</p>
-                    
-                    <p>I am committed to continuous learning and staying at the forefront of AI and web development technologies. My goal is to create web solutions that are not only technologically advanced but also pragmatic and impactful for businesses navigating the digital landscape.</p>
+                <div class="about-text">
+                    <p>As a final-year BS Artificial Intelligence student at SZABIST, I blend cutting-edge AI technologies with front-end development to create innovative web solutions. My expertise spans machine learning, data analysis, and responsive web design.</p>
+                    <p>With experience in data processing and e-commerce management, I've honed my skills in interpreting complex data and understanding digital marketplaces. My goal is to develop intelligent, user-friendly web applications that deliver real business value in our evolving digital landscape.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills-section">
+    <section id="skills" class="section">
         <div class="container">
             <h2 class="section-title fade-in">Skills</h2>
             <div class="skills-grid fade-in">
-                <div class="skill-item">Machine Learning Algorithms</div>
-                <div class="skill-item">Data Preprocessing</div>
-                <div class="skill-item">Frameworks and Libraries</div>
-                <div class="skill-item">Natural Language Processing (NLP)</div>
-                <div class="skill-item">Model Evaluation and Optimization</div>
-                <div class="skill-item">Front-end Development</div>
-                <div class="skill-item">E-commerce Solutions</div>
+                <div class="skill-item">Machine Learning</div>
                 <div class="skill-item">Data Analysis</div>
-                <div class="skill-item">Web Application Development</div>
+                <div class="skill-item">Front-end Development</div>
+                <div class="skill-item">AI Algorithms</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">React</div>
+                <div class="skill-item">TensorFlow</div>
+                <div class="skill-item">E-commerce Solutions</div>
             </div>
         </div>
     </section>
@@ -276,16 +247,16 @@
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title fade-in">Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-item fade-in">
+            <div class="project-grid fade-in">
+                <div class="project-item">
                     <h3 class="project-title">AI-Powered Analytics Dashboard</h3>
                     <p>A machine learning model to analyze and visualize complex e-commerce data sets, providing actionable insights for businesses.</p>
                 </div>
-                <div class="project-item fade-in">
+                <div class="project-item">
                     <h3 class="project-title">Smart E-commerce Platform</h3>
                     <p>A fully responsive online store with modern UI/UX design, featuring AI-driven product recommendations and personalized user experiences.</p>
                 </div>
-                <div class="project-item fade-in">
+                <div class="project-item">
                     <h3 class="project-title">Intelligent Inventory System</h3>
                     <p>An AI-based system for optimizing inventory levels and predicting product demand, improving efficiency and reducing costs for e-commerce businesses.</p>
                 </div>
